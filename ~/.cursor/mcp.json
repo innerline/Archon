@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "archon": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-cli",
+        "serve",
+        "tcp://localhost:3737"
+      ]
+    }
+  }
+}
+
+
