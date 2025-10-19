@@ -1,0 +1,27 @@
+# Zed IDE configuration for Archon MCP integration
+
+# Set environment variables that the MCP client can consume
+env {
+  # Base URL of the MCP server
+  MCP_URL = "http://localhost:8051"
+
+  # Optional authentication token if MCP requires it
+  MCP_TOKEN = ""
+}
+
+# Define a custom keybinding to quickly open the Archon UI
+keybinding "open_archon_ui" {
+  key = "Ctrl-Alt-A"
+  command = "open_browser http://localhost:3737"
+}
+
+# Logging configuration for debugging integration issues
+log {
+  level = "debug"          # Options: trace, debug, info, warn, error, fatal
+}
+
+# Optional: configure a default HTTP proxy if behind a corporate proxy
+http_proxy {
+  url = ""                  # e.g., "http://proxy.company.com:8080"
+  no_proxy = "localhost,127.0.0.1"
+}
